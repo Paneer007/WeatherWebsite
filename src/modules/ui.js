@@ -14,11 +14,11 @@ class UI {
     const humidityText = document.getElementById('humidityText');
     const pressureText = document.getElementById('pressureText');
     cityText.textContent = `City : ${Obj.name}`;
-    temperatureText.textContent = `Temperature : ${Obj.main.temp - 273.15} C`;
+    temperatureText.textContent = `Temperature : ${(Obj.main.temp - 273.15).toFixed(2)} C`;
     generalWeatherText.textContent = `Weather Today : ${Obj.weather[0].description}`;
-    windSpeedText.textContent = `WindSpeed : ${Obj.wind.speed}`;
-    humidityText.textContent = `Humidity : ${Obj.main.humidity}`;
-    pressureText.textContent = `Pressure : ${Obj.main.pressure}`;
+    windSpeedText.textContent = `Wind Speed : ${Obj.wind.speed} km/h`;
+    humidityText.textContent = `Humidity : ${Obj.main.humidity} %`;
+    pressureText.textContent = `Pressure : ${Obj.main.pressure} hPa`;
   }
 }
 export default UI;
