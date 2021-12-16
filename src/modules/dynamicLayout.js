@@ -2,6 +2,7 @@ class dynamicLayout {
   static weatherCard() {
     const parentSelector = document.getElementById('WeatherCard');
     parentSelector.innerHTML = '';
+    parentSelector.style.visibility = 'visible';
     const cityText = document.createElement('p');
     const temperatureText = document.createElement('p');
     const generalWeatherText = document.createElement('p');

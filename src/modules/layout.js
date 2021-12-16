@@ -4,15 +4,14 @@ import functionality from './functionality';
 import UI from './ui';
 
 function basicLayout() {
-  const parentSelector = document.createElement('div');
-  document.body.appendChild(parentSelector);
-  parentSelector.id = 'ParentBody';
   const headSelector = document.createElement('div');
   const bodySelector = document.createElement('div');
-  parentSelector.appendChild(headSelector);
-  parentSelector.appendChild(bodySelector);
+  document.body.appendChild(headSelector);
+  document.body.appendChild(bodySelector);
   headSelector.id = 'Header';
   bodySelector.id = 'Content';
+  headSelector.className = 'Header';
+  bodySelector.className = 'Content';
 }
 function headerLayout() {
   const parentSelector = document.getElementById('Header');
@@ -27,6 +26,7 @@ function searchBar() {
   const searchInput = document.createElement('input');
   const submitButton = document.createElement('button');
   searchInput.id = 'SearchInput';
+  searchInput.className = 'SearchInput';
   submitButton.id = 'ButtonForWeatherRequest';
   parentSelector.appendChild(searchInput);
   parentSelector.appendChild(submitButton);
@@ -39,7 +39,10 @@ function bodyLayout() {
   parentSelector.appendChild(searchSelector);
   parentSelector.appendChild(cardSelector);
   searchSelector.id = 'SearchBar';
+  searchSelector.className = 'SearchBar';
   cardSelector.id = 'WeatherCard';
+  cardSelector.className = 'WeatherCard';
+  cardSelector.style.visibility = 'hidden';
   searchBar();
 }
 class layout {

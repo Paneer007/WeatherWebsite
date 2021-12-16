@@ -1,15 +1,19 @@
+/* eslint-disable no-alert */
 import dynamicLayout from './dynamicLayout';
 import UI from './ui';
 
 async function fetchDataFromWeatherSite(url) {
   try {
     const ObjectOfWeatherInfo = await fetch(url, { mode: 'cors' });
-    const ObjWeather = await ObjectOfWeatherInfo.json();
-    dynamicLayout.weatherCard();
-    UI.UIWeatherCard(ObjWeather);
+    if (!(ObjectOfWeatherInfo.ok)) {
+      alert('Enter a valid city');
+    } else {
+      const ObjWeather = await ObjectOfWeatherInfo.json();
+      dynamicLayout.weatherCard();
+      UI.UIWeatherCard(ObjWeather);
+    }
   } catch (error) {
-    console.log(error);
-    alert('Enter a valid city');
+    alert('Error enter a proper value');
   }
 }
 function SearchForCity() {
