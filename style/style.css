@@ -14,6 +14,7 @@ body{
     background-color: #437F97;
     color:#0a2463;
     font-size: large;
+    font-family: montserrat;
 }
 .SearchBar,.WeatherCard{
     padding:8px;
@@ -21,4 +22,5 @@ body{
     background-color: #3c887e;
     border-radius: 8px;
     font-size: large;
+    font-family: quicksand;
 }
