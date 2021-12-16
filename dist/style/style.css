@@ -23,4 +23,11 @@ body{
     border-radius: 8px;
     font-size: large;
     font-family: quicksand;
+    width:250px;
+}
+.SearchBar{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
